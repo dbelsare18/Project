@@ -1,0 +1,15 @@
+com\userservice\controller\UserController.class
+com\userservice\UserServiceApplication.class
+com\userservice\exception\AccessDeniedException.class
+com\userservice\service\FeignClientInterceptor.class
+com\userservice\constants\UserConstants.class
+com\userservice\entities\UserEntity.class
+com\userservice\exception\GlobalExceptionHandler.class
+com\userservice\config\SecurityConfig.class
+com\userservice\exception\UserNotFoundException.class
+com\userservice\service\UserService.class
+com\userservice\repository\UserRepository.class
+com\userservice\service\Impl\UserServiceImpl.class
+com\userservice\entities\UserEntity$UserEntityBuilder.class
+com\userservice\entities\UserEntity$UserEntityBuilderImpl.class
+com\userservice\dto\UserDto.class

@@ -1,0 +1,17 @@
+#server:
+#  port: 8989
+#spring:
+#  application:
+#    name: PASSENGER-API-GATEWAY-SERVICE
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: PASSENGER-SERVICE
+#          uri: http://localhost:5456
+#          predicates:
+#            - Path=/api/passengers**
+
+
+#spring:
+#  config:
+#    import: configserver:http://localhost:8087

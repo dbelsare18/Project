@@ -1,0 +1,61 @@
+eureka:
+  instance:
+    prefer-ip-address: true  
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+ 
+spring:
+
+#  web:
+#   cors:
+#      allowed-origins: "http://localhost:3000" # Adjust for your React app's URL
+#      allowed-methods: "GET,POST,PUT,DELETE,OPTIONS"
+#      allow-credentials: true
+
+
+  cloud:
+    gateway:
+      routes:
+      - id: FlightService
+        uri:  http://localhost:7064
+        predicates:
+        - Path=/api/flights/**
+        
+      - id: AirportService
+        uri: http://localhost:7062
+        predicates:
+        - Path=/api/airports**
+        
+      - id: AuthenticationService
+        uri:  http://localhost:8082
+        predicates:
+        - Path=/auth/**
+        
+      - id: BookingService
+        uri:  http://localhost:7060
+        predicates:
+        - Path=/booking/**
+        
+      - id: PassengerService
+        uri:  http://localhost:7063
+        predicates:
+        - Path=/api/passengers/**
+        
+      - id: ScheduledFlightService
+        uri:  http://localhost:7061
+        predicates:
+        - Path=/scheduledflight/**
+        
+      - id: ScheduleService
+        uri:  http://localhost:7066
+        predicates:
+        - Path=/api/schedules/**
+        
+      - id: UserService
+        uri:  http://localhost:7065
+        predicates:
+        - Path=/user/**
+        
