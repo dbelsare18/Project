@@ -1,0 +1,86 @@
+.booking-container {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  max-width: 800px;
+  padding: 20px;
+  border: 1px solid #a3c1e1;
+  border-radius: 8px;
+  background-color: #e3f2fd; /* Light blue background */
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: #1565c0; /* Darker blue for headers */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  background-color: #ffffff; /* White table background */
+}
+
+table, th, td {
+  border: 1px solid #a3c1e1; /* Light blue borders */
+  padding: 8px;
+}
+
+input[type="text"], input[type="number"], select {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid #90caf9; /* Blue border for inputs */
+  background-color: #e3f2fd; /* Light blue input background */
+}
+
+button {
+  margin: 10px 0;
+  padding: 8px 16px;
+  background-color: #42a5f5; /* Blue button background */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1e88e5; /* Darker blue on hover */
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+.confirm-button {
+  background-color: #42a5f5;
+}
+
+.confirm-button:disabled {
+  background-color: #bbdefb; /* Light blue when disabled */
+  cursor: not-allowed;
+}
+
+p {
+  font-size: 12px;
+  color: #1565c0; /* Blue for text */
+}
+
+.delete-button {
+  padding: 8px 12px;
+  background-color: #ef5350; /* Soft red for delete button */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #e53935; /* Darker red on hover */
+}
+
+.message {
+  margin-top: 15px;
+  color: #42a5f5; /* Blue for success messages */
+}
+
+.message.error {
+  color: #ef5350; /* Red for error messages */
+}

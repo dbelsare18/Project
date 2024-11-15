@@ -1,0 +1,43 @@
+.delete-booking-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.delete-booking-container h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #1565c0; /* Dark blue for headings */
+}
+
+.delete-booking-container input {
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    width: 250px;
+    border: 1px solid #90caf9; /* Light blue border */
+    border-radius: 4px;
+    background-color: #e3f2fd; /* Light blue input background */
+}
+
+.delete-booking-container button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #42a5f5; /* Light blue button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-booking-container button:hover {
+    background-color: #1e88e5; /* Darker blue on hover */
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #42a5f5; /* Blue for success messages */
+}

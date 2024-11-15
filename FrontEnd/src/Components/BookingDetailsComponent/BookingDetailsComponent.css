@@ -1,0 +1,97 @@
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.card {
+    border: 1px solid #e0e0e0; /* Optional border color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.equal-height {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Column direction */
+    height: 100%; /* Ensure full height of the parent */
+}
+
+.card-title {
+    font-size: 1.5rem; /* Larger title font size */
+    color: #007bff; /* Bootstrap primary color */
+    margin-bottom: 1rem; /* Space below title */
+}
+
+.card-text {
+    margin-bottom: 0.5rem; /* Space below each text item */
+}
+
+.text-container {
+    display: inline-block;
+    text-align: left; /* Align text to the left */
+}
+
+.btn {
+    font-weight: bold;
+    padding: 10px 20px; /* Larger padding for the button */
+}
+
+.container {
+    background-color: #f8f9fa; /* Light background for the container */
+    border-radius: 15px; /* Rounded corners for the container */
+    padding: 20px; /* Padding around the content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.text-danger {
+    font-weight: bold; /* Make error text bold */
+    text-align: center; /* Center align error text */
+}
+
+.container {
+    max-width: 800px; /* Set a max width for the container */
+}
+
+.card {
+    border: 1px solid #e0e0e0; /* Light gray border for cards */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Slightly larger title */
+    margin-bottom: 1rem; /* Space below the title */
+}
+
+.card-text {
+    font-size: 0.9rem; /* Slightly smaller font for card text */
+}
+
+.text-container {
+    text-align: left; /* Left-align text within the container */
+}
+
+.equal-height {
+    display: flex; /* Use flex to maintain equal height */
+    flex-direction: column;
+}
+
+.mb-3 {
+    margin-bottom: 1rem; /* Space between passenger details */
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem; /* Space between card sections */
+}
+
+.form-check {
+    margin-bottom: 0.5rem; /* Space below each radio button */
+}
+
+/* Center the entire component */
+.text-center {
+    text-align: center;
+}
+
+/* Add some margin to the buttons */
+.btn {
+    margin-top: 1rem; /* Space above the button */
+}
+

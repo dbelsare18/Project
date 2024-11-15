@@ -1,0 +1,92 @@
+.booking-container {
+    font-family: Arial, sans-serif;
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+.booking-details {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.passenger-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+.passenger-table th, .passenger-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.passenger-table th {
+    font-weight: bold;
+    color: #555;
+}
+
+.add-passenger-button {
+    margin: 10px 0;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.billing-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.billing-field {
+    display: flex;
+    align-items: center;
+}
+
+.billing-field label {
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.billing-field input {
+    padding: 5px;
+    width: 200px;
+}
+
+.terms-section {
+    margin-top: 10px;
+}
+
+.terms-section span {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.confirm-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.confirm-button:disabled {
+    background-color: #cccccc;
+}

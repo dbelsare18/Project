@@ -1,0 +1,20 @@
+.container {
+    background-color: #f8f9fa; /* Light background color */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Padding around the content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.card {
+    border: 1px solid #dee2e6; /* Card border */
+    border-radius: 10px; /* Rounded card corners */
+}
+
+
+.form-control-sm {
+    height: calc(1.5em + .75rem + 2px); /* Custom height for smaller fields */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Adjust the font size for card titles */
+}
