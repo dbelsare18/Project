@@ -1,0 +1,77 @@
+pipeline {
+    agent any
+    
+    environment {
+        AWS_DEFAULT_REGION = 'us-east-1' // Set your AWS region
+    }
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the repository using the provided Git credentials
+                git url: 'https://github.com/dbelsare18/Project', credentialsId: 'HiJenkins'
+            }
+        }
+        
+        stage('Build Backend') {
+            steps {
+                // Package each Spring Boot microservice as a JAR using Maven
+                dir('FlightManagementIntergate/AirportServiceRepo') {
+                    sh './mvnw clean package -DskipTests' // Adjust for your setup, skipping tests for speed
+                }
+                dir('FlightManagementIntergate/ApiGateway') {
+                    sh './mvnw clean package -DskipTests'
+                }
+		 dir('FlightManagementIntergate/AuthenticationServiceRepository') {
+                    sh './mvnw clean package -DskipTests'
+                }
+		 dir('FlightManagementIntergate/BookingService') {
+                    sh './mvnw clean package -DskipTests'
+                }
+		 dir('FlightManagementIntergate/ConfigServer') {
+                    sh './mvnw clean package -DskipTests'
+                }
+		 dir('FlightManagementIntergate/FlightServiceRepo') {
+                    sh './mvnw clean package -DskipTests'
+                }
+		 dir('FlightManagementIntergate/PassengerServiceRepo') {
+                    sh './mvnw clean package -DskipTests'
+                }
+		 dir('FlightManagementIntergate/ScheduleServiceRepo') {
+                    sh './mvnw clean package -DskipTests'
+                }
+		 dir('FlightManagementIntergate/ServiceRegistry') {
+                    sh './mvnw clean package -DskipTests'
+                }
+		 dir('FlightManagementIntergate/UserServiceRepos') {
+                    sh './mvnw clean package -DskipTests'
+                }
+		
+
+            }
+        }
+        
+        stage('Build Frontend') {
+            steps {
+                dir('frontend') {
+                    // Install dependencies and build frontend using npm
+                    sh 'npm install'
+                    sh 'npm run build' // Output static files (usually to a `build` or `dist` directory)
+                }
+            }
+        }
+        
+        stage('Deploy to S3') {
+            steps {
+                // Upload JAR files from the backend and frontend static files to S3
+                withAWS(credentials: 'aws-credentials-id') {
+                    // Upload the backend JAR files
+                    s3Upload(bucket: 'my-backend-s3-bucket', includePathPattern: '**/target/*.jar', workingDir: 'FlightManagementIntergate')
+                    
+                    // Upload the frontend build (static files) to S3
+                    s3Upload(bucket: 'my-frontend-s3-bucket', includePathPattern: '**/build/**', workingDir: 'FrontEnd')
+                }
+            }
+        }
+    }
+}
